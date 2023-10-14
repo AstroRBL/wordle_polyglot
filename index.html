@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index_en.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle | English</title>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="bar4"></div>
+      <div class="bar5"></div>
+      <div class="bar6"></div>
+      <div class="bar7"></div>
+      <div class="bar8"></div>
+      <div class="bar9"></div>
+      <div class="bar10"></div>
+      <div class="bar11"></div>
+      <div class="bar12"></div>
+    </div>
+    <div class="loader-overlay"></div>
+    <div id="title">
+      <h1>Wordle | English</h1>
+      <button id="gear"><img src="images/icons8-gear-50.png" /></button>
+      <hr />
+    </div>
+    <div id="board"></div>
+    <div id="pop-up"></div>
+    <div id="overlay"></div>
+    <div id="answer">
+      <h1>Game Over!</h1>
+      <hr>
+      <p id="message"></p>
+      <button id="restartBtn">Playagain</button>
+    </div>
+    
+<div class="error">
+    <div class="error__icon">
+        <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z" fill="#393a37"></path></svg>
+    </div>
+    <div class="error__title">Type in a Five-Letter word!</div>
+</div>
+      
+    <div id="settings">
+      <h1>Settings</h1>
+      <button id="closeBtn"><img src="images/icons8-close-50.png" /></button>
+      <hr />
+      <p>Preferred Language:</p>
+      <select id="select">
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+        <option value="es">Spanish</option>
+      </select>
+      <hr />
+      <div class="sbtn">
+        <button id="saveBtn">Save</button>
+      </div>
+    </div>
+    <div class="startMessage">
+      <h1>Quick Rules:</h1>
+      <hr>
+      <p>
+        In Wordle, players are tasked with deciphering a secret five-letter word within a limited number of attempts. Each guess
+        is met with specific feedback: correct letters that are also in the correct position are highlighted, while correct
+        letters in the wrong position are marked differently. Incorrect letters are indicated as well. Players strategically
+        select words based on these cues, gradually narrowing down the possibilities with each guess. The challenge lies in
+        deciphering the word using logic and deduction within the allotted attempts.
+      </p>
+      <button id="startBtn">Got It</button>
+    </div>
+    <div id="keyboard">
+      <button class="keyboard-button">Q</button>
+      <button class="keyboard-button">W</button>
+      <button class="keyboard-button">E</button>
+      <button class="keyboard-button">R</button>
+      <button class="keyboard-button">T</button>
+      <button class="keyboard-button">Y</button>
+      <button class="keyboard-button">U</button>
+      <button class="keyboard-button">I</button>
+      <button class="keyboard-button">O</button>
+      <button class="keyboard-button">P</button>
+      <button class="keyboard-button">A</button>
+      <button class="keyboard-button">S</button>
+      <button class="keyboard-button">D</button>
+      <button class="keyboard-button">F</button>
+      <button class="keyboard-button">G</button>
+      <button class="keyboard-button">H</button>
+      <button class="keyboard-button">J</button>
+      <button class="keyboard-button">K</button>
+      <button class="keyboard-button">L</button>
+      <button id="enter" class="keyboard-button">ENTER</button>
+      <button class="keyboard-button">Z</button>
+      <button class="keyboard-button">X</button>
+      <button class="keyboard-button">C</button>
+      <button class="keyboard-button">V</button>
+      <button class="keyboard-button">B</button>
+      <button class="keyboard-button">N</button>
+      <button class="keyboard-button">M</button>
+      <button id="del" class="keyboard-button">DELETE</button>
+    </div>
+
+  </body>
+</html>

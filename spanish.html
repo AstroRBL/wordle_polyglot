@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+    </style>
+    <link rel="stylesheet" href="styles_es.css" />
+    <script src="index_es.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle | Español</title>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+        <div class="bar7"></div>
+        <div class="bar8"></div>
+        <div class="bar9"></div>
+        <div class="bar10"></div>
+        <div class="bar11"></div>
+        <div class="bar12"></div>
+    </div>
+    <div class="loader-overlay"></div>
+    <div id="title">
+        <h1>Wordle | Español</h1>
+        <button id="gear"><img src="images/icons8-gear-50.png" /></button>
+        <hr />
+    </div>
+    <div id="board"></div>
+    <div id="pop-up"></div>
+    <div id="overlay"></div>
+    <div id="answer">
+        <h1>¡Juego terminado!</h1>
+        <hr>
+        <p id="message"></p>
+        <button id="restartBtn">Repetir</button>
+    </div>
+
+    <div class="error">
+        <div class="error__icon">
+            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z"
+                    fill="#393a37"></path>
+            </svg>
+        </div>
+        <div class="error__title">¡Escribe una palabra de cinco letras!</div>
+    </div>
+
+    <div id="settings">
+        <h1>Ajustes</h1>
+        <button id="closeBtn"><img src="images/icons8-close-50.png" /></button>
+        <hr />
+        <p>Idioma preferido:</p>
+        <select id="select">
+            <option value="en">Inglés</option>
+            <option value="ar">Arábica</option>
+            <option value="es">Español</option>
+        </select>
+        <hr />
+        <div class="sbtn">
+            <button id="saveBtn">Ahorrar</button>
+        </div>
+    </div>
+    <div class="startMessage">
+        <h1>Reglas rápidas:</h1>
+        <hr>
+        <p>
+            En Wordle, los jugadores tienen la tarea de descifrar una palabra secreta de cinco letras dentro de un número limitado
+            de
+            intentos. cada conjetura
+            recibe comentarios específicos: las letras correctas que también están en la posición correcta se resaltan, mientras que
+            correcto
+            las letras en la posición incorrecta se marcan de manera diferente. También se indican las letras incorrectas. Jugadores
+            estratégicamente
+            seleccione palabras basándose en estas señales, reduciendo gradualmente las posibilidades con cada suposición. El reto
+            se encuentra en
+            descifrar la palabra usando la lógica y la deducción dentro de los intentos asignados.
+        </p>
+        <button id="startBtn">Entiendo</button>
+    </div>
+    <div id="keyboard">
+        <button class="keyboard-button">Q</button>
+        <button class="keyboard-button">W</button>
+        <button class="keyboard-button">E</button>
+        <button class="keyboard-button">R</button>
+        <button class="keyboard-button">T</button>
+        <button class="keyboard-button">Y</button>
+        <button class="keyboard-button">U</button>
+        <button class="keyboard-button">I</button>
+        <button class="keyboard-button">O</button>
+        <button class="keyboard-button">P</button>
+        <button class="keyboard-button">A</button>
+        <button class="keyboard-button">S</button>
+        <button class="keyboard-button">D</button>
+        <button class="keyboard-button">F</button>
+        <button class="keyboard-button">G</button>
+        <button class="keyboard-button">H</button>
+        <button class="keyboard-button">J</button>
+        <button class="keyboard-button">K</button>
+        <button class="keyboard-button">L</button>
+        <button id="enter" class="keyboard-button">ENTER</button>
+        <button class="keyboard-button">Z</button>
+        <button class="keyboard-button">X</button>
+        <button class="keyboard-button">C</button>
+        <button class="keyboard-button">V</button>
+        <button class="keyboard-button">B</button>
+        <button class="keyboard-button">N</button>
+        <button class="keyboard-button">M</button>
+        <button id="del" class="keyboard-button">ELIMINAR</button>
+    </div>
+
+
+</body>
+
+</html>

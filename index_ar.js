@@ -490,37 +490,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showPop.style.display = "block";
     over.style.display = "block";
   }
-  function checkWordleInput() {
-    let guess = "";
-    for (let c = 0; c < width; c++) {
-      let currTile = document.getElementById(
-        row.toString() + "-" + c.toString()
-      );
-      let letter = currTile.innerText;
-      guess += letter;
-    }
-    guess = guess.toLowerCase();
-    console.log(guess);
-    if (wordsList.includes(guess)) {
-      update();
-    } else {
-      const errorMsg = document.querySelector(".error");
-      const errorM = document.querySelector(".error__title");
-      errorMsg.style.display = "flex";
-      errorM.innerText = "الكلمة غير موجودة في قائمة الكلمات.";
-
-      setTimeout(() => {
-        errorMsg.style.transition = "opacity 0.3s ease-in-out";
-        errorMsg.style.opacity = 0;
-        setTimeout(() => {
-          errorMsg.style.display = "none";
-          errorMsg.style.opacity = 1;
-        }, 300);
-      }, 2000);
-    }
-  }
   function update() {
-    checkWordleInput();
     let correct = 0;
     let matchedIndices = new Array(width).fill(false);
 

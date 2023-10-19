@@ -5,6 +5,27 @@ body {
   overflow: hidden;
   font-family: "Ubuntu", sans-serif;
 }
+body::after{
+  content: "";
+  position: absolute;
+  background-color: #9900ff;
+  width: 450px;
+  height: 450px;
+  left: 70%;
+  top:10%;
+  filter: blur(110px);
+}
+
+body::before{
+  content: "";
+  position: absolute;
+  background-color: #0077ff;
+  width: 450px;
+  height: 450px;
+  left: 5%;
+  top: 40%;
+  filter: blur(110px);
+}
 #title {
   text-align: center;
   letter-spacing: 2px;
